@@ -226,9 +226,11 @@ void World::further_steps()
 		}
 
 		imshow("Shreya's Langton's Ant", *board);
+		
 		waitKey(1);
 		
 		count = count + 1;
+		imwrite(to_string(count) + ".png", *board);
 		if (count%1000==0)
 		{
 			cout << " This Was Iteration Number : " << count << endl;
